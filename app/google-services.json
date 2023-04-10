@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "603999481762",
+    "project_id": "hadith-shrarif",
+    "storage_bucket": "hadith-shrarif.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603999481762:android:f14f8dd6c88fca06248cfb",
+        "android_client_info": {
+          "package_name": "com.mnashat_dev.hadithsharif"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603999481762-3v47khjm8r5ou37jo7u6m8rrcd27kkjb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mnashat_dev.hadithsharif",
+            "certificate_hash": "91fa8cdd004ec30b5223791da81f40942486fd59"
+          }
+        },
+        {
+          "client_id": "603999481762-uigbaihor4vc19v931gi810616auk7a5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBllVGwFkjO0iaAQOr9Rz4WOh_GiCMsi_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603999481762-uigbaihor4vc19v931gi810616auk7a5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
