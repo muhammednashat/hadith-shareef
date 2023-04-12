@@ -39,6 +39,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
     viewModel.items.observe(viewLifecycleOwner, Observer {
         it?.let {
             Log.e("TAG","item $it")

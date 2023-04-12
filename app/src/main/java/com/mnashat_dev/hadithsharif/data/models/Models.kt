@@ -36,12 +36,12 @@ data class Hadith(
 
 data class ItemForFirebase(
     val id: Long? = null,
-    val benefit: String? = null,
-    val body: String? = null,
-    val narrator: String? = null,
-    val almahdath: String? = null,
-    val explanation: String? = null,
-    val isFavorite: Boolean? = null,
+    val b: String? = null,
+    val d: String? = null,
+    val n: String? = null,
+    val a: String? = null,
+    val e: String? = null,
+    val i: Boolean? = null,
 
     )
 
@@ -50,12 +50,12 @@ fun List<ItemForFirebase>.asdomainModel(): List<Hadith> {
     return map {
         Hadith(
             id = it.id,
-            benefit = it.benefit,
-            body = it.body,
-            narrator = it.narrator,
-            almahdath = it.almahdath,
-            explanation = it.explanation,
-            isFavorite = it.isFavorite,
+            benefit = it.b,
+            body = it.d,
+            narrator = it.n,
+            almahdath = it.a,
+            explanation = it.e,
+            isFavorite = it.i,
         )
     }
 }

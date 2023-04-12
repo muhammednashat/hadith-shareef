@@ -6,14 +6,14 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.mnashat_dev.hadithsharif.data.models.Hadith
-import com.mnashat_dev.hadithsharif.databinding.ItemViewBinding
+import com.mnashat_dev.hadithsharif.databinding.ItemRecyclerAllHadithBinding
 
 
 class AllHadithAdapter(private val clickListener: HadithListener) :
     ListAdapter<Hadith, AllHadithAdapter.AllHadithViewHolder>(ItemDiffUtil()) {
 
 
-    class AllHadithViewHolder private constructor(val binding: ItemViewBinding) :
+    class AllHadithViewHolder private constructor(val binding: ItemRecyclerAllHadithBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(
@@ -29,7 +29,7 @@ class AllHadithAdapter(private val clickListener: HadithListener) :
         companion object {
             fun from(parent: ViewGroup): AllHadithViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ItemViewBinding.inflate(layoutInflater, parent, false)
+                val binding = ItemRecyclerAllHadithBinding.inflate(layoutInflater, parent, false)
 
                 return AllHadithViewHolder(binding)
             }

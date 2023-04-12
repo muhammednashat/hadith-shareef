@@ -49,7 +49,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/search_view"
-            tools:listitem="@layout/item_view" />
+            tools:listitem="@layout/item_recycler_all_hadith" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
