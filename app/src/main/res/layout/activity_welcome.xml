@@ -30,8 +30,8 @@
         android:text="بلغو عنى ولو ايه "
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_large"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView"
-        tools:layout_editor_absoluteX="32dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
