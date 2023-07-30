@@ -2,15 +2,18 @@ package com.mnashat_dev.hadithsharif.ui.allhadith
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.mnashat_dev.hadithsharif.R
+import com.mnashat_dev.hadithsharif.data.models.Hadith
 import com.mnashat_dev.hadithsharif.databinding.FragmentAllHadithBinding
-import com.mnashat_dev.hadithsharif.ui.home_fragment.HomeFragmentViewModel
+import com.mnashat_dev.hadithsharif.ui.MainActivity
+import com.mnashat_dev.hadithsharif.ui.displayhadith.DisplayHadithFragment
+import com.mnashat_dev.hadithsharif.ui.home_fragment.HomeFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AllHadithFragment : Fragment() {
@@ -26,6 +29,7 @@ class AllHadithFragment : Fragment() {
 
 
         allHadithAdapter = AllHadithAdapter(HadithListener {
+            openDisplayHadithFragment(it)
 
         })
 
@@ -38,6 +42,21 @@ class AllHadithFragment : Fragment() {
 
         setUpRecyclerview()
 
+    }
+
+    private fun openDisplayHadithFragment(hadith: Hadith){
+
+        activity?.let { it ->
+            val bundle = Bundle()
+            bundle.putParcelable("hadith",hadith)
+            val displayHadithFragment = DisplayHadithFragment()
+            displayHadithFragment.arguments = bundle
+
+            it.supportFragmentManager.beginTransaction().addToBackStack(
+                DisplayHadithFragment::class.java.name
+
+            ).replace(R.id.frame_layout, displayHadithFragment).commit()
+        }
     }
 
     private fun setUpRecyclerview(){

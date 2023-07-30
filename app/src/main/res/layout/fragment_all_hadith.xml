@@ -9,19 +9,37 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="@color/gray"
         android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_benefit"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/gradiant_color"
+            android:fontFamily="@font/amiri_bold"
+            android:gravity="center"
+            android:padding="@dimen/padding_small"
+            android:text="صلى الله عليه وسلم"
+            android:textColor="@color/white"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview_all_hadith"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_normal"
+            android:layout_height="0dp"
+
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_benefit"
             app:layout_constraintVertical_bias="0.5"
             tools:listitem="@layout/item_recycler_all_hadith" />
 

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="hadith"
+            type="com.mnashat_dev.hadithsharif.data.models.Hadith" />
+
+        <variable
+            name="clickListener"
+            type="com.mnashat_dev.hadithsharif.ui.serch.SearchListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:onClick="@{() -> clickListener.onClick(hadith)}"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_normal"
+        android:layout_marginBottom="4dp"
+        android:paddingEnd="@dimen/padding_large"
+        >
+
+        <TextView
+            android:id="@+id/tv_benefit"
+            bodyOfHadith="@{hadith}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amiri_bold"
+            android:text="ليب بلبيل لبيبل قلبيلبل"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

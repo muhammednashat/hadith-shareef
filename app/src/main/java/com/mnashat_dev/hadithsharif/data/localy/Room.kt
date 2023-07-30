@@ -16,6 +16,9 @@ interface ItemDao {
     @Query("SELECT * FROM ITEM_FIREBASE_TABLE")
     fun getAllItems(): LiveData<List<Hadith>>
 
+    @Query("SELECT * FROM ITEM_FIREBASE_TABLE ORDER BY id DESC LIMIT 1")
+    fun getItem(): LiveData<Hadith>
+
 }
 
 

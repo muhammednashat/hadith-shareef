@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
@@ -16,27 +17,82 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="@drawable/round_shape"
-        android:layout_margin="@dimen/margin_small"
-        android:layout_height="wrap_content">
+        android:background="@color/white"
+        android:onClick="@{() -> clickListener.onClick(hadith)}"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:paddingEnd="@dimen/padding_large"
+        >
 
         <TextView
+            android:id="@+id/tv_benefit"
+            benefitOfHadith="@{hadith}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="24dp"
-            android:text="Test"
-            android:textStyle="bold"
             android:fontFamily="@font/amiri_bold"
+            android:text="ليب بلبيل لبيبل قلبيلبل"
             android:textColor="@color/black"
-            android:textSize="24sp"
-            benefitOfHadith="@{hadith}"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5"/>
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_narrator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/amiri_bold"
+            android:text="على بن طالب"
+            narratorOfHadith="@{hadith}"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_normal"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amiri_bold"
+            android:text="@string/almahdath"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_benefit" />
+
+        <TextView
+            android:id="@+id/tv_almahdath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/amiri_bold"
+            android:text="الالبانى"
+            almohdathOfHadith="@{hadith}"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_normal"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/amiri_bold"
+            android:text="@string/narrator"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_benefit" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

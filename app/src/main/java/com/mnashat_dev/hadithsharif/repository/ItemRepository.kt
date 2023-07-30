@@ -19,6 +19,7 @@ class ItemRepository(private val database: ItemDatabase) {
     var listOfItem = arrayListOf<ItemForFirebase>()
 
     val items = database.itemDao.getAllItems()
+    val item = database.itemDao.getItem()
 
     suspend fun refreshData() {
         withContext(Dispatchers.IO) {

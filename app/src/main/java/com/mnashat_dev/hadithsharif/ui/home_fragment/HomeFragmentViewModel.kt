@@ -15,21 +15,23 @@ class HomeFragmentViewModel (application: Application): AndroidViewModel(applica
     private val TAG = "HomeFragmentViewModel"
     private val database = getDatabase(application)
     private val itemRepo = ItemRepository(database)
+
     var items = itemRepo.items
+    val item = itemRepo.item
 
     init {
 
         viewModelScope.launch {
+
             try {
                 itemRepo.refreshData()
                 Log.e("TAG","success")
+
             } catch (e: Exception) {
                 Log.e(TAG, " Exception ${e.message}")
                 Log.e("TAG","fail")
-
             }
         }
     }
-
 
 }

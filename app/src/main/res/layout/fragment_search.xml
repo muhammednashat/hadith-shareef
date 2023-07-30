@@ -9,7 +9,24 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="@color/gray"
+
         android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_benefit"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/gradiant_color"
+            android:fontFamily="@font/amiri_bold"
+            android:gravity="center"
+            android:padding="@dimen/padding_small"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/search_view"
@@ -35,21 +52,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:drawableTopCompat="@drawable/ic_no_data" />
+            />
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview_Search"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="@dimen/margin_normal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/search_view"
-            tools:listitem="@layout/item_recycler_all_hadith" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_benefit"
+            tools:listitem="@layout/item_view_serch_fragment" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
